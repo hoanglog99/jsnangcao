@@ -1,0 +1,22 @@
+{
+  "name": "asm",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tailwind": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css -w"
+  },
+  "devDependencies": {
+    "stylelint-config-recommended": "^7.0.0",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "daisyui": "^2.15.1",
+    "navigo": "^8.11.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
+  }
+}
