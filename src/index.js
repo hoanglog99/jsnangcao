@@ -1,17 +1,14 @@
-import Navigo from "navigo";
 import { Header } from "./components/Header.js";
 import { Footer } from "./components/Footer.js";
-import { Home } from "./pages/home.js";
-import { Abouts } from "./pages/abouts.js";
-import { News } from "./pages/News.js";
-import { Student } from "./pages/Student.js";
-import { StudentDetail } from "./pages/StudentDetail.js";
-import { StudentAdd } from "./pages/StudentAdd.js";
-import { ProductDetail } from "./pages/ProductDetail.js";
-import { Product } from "./pages/Product.js";
-import { ProductAdd } from "./pages/ProductAdd.js";
+import { ProductDetail } from "./pages/client/ProductDetail.js";
+import { Product } from "./pages/client/Product.js";
+import { ProductAdd } from "./pages/admin/ProductAdd.js";
+import { Cart } from "./pages/client/Cart.js";
+import { router } from "./helpers/router.js";
+import { ListProductAdmin } from "./pages/admin/ListProductAdmin.js";
+import { ListCategoryAdmin } from "./pages/admin/ListCategoryAdmin.js";
+import { CategoryAdd } from "./pages/admin/CategoryAdd.js";
 
-const router = new Navigo('/', { linksSelector: 'a' })
 
 const render = async (content, id) => {
     document.querySelector('#header').innerHTML = Header.render();
@@ -19,20 +16,22 @@ const render = async (content, id) => {
     document.querySelector('#footer').innerHTML = Footer.render();
 
     if (content.afterRender) {
-        content.afterRender();
+        content.afterRender(id);
     }
 }
 
 router.on({
-    '/': () => render(Home),
-    '/about': () => render(Abouts),
-    '/news': () => render(News),
-    '/students': () => render(Student),
-    '/students/add': () => render(StudentAdd),
-    '/students/detail/:id': (data) => render(StudentDetail, data.data.id),
-    '/products': () => render(Product),
-    '/products/add': () => render(ProductAdd),
-    '/products/detail/:id': (data) => render(ProductDetail, data.data.id),
+    '/': () => render(Product),
+    '/:id': (data) => render(Product, data.data.id),
+    '/detail/:id': (data) => render(ProductDetail, data.data.id),
+    '/book/add': () => render(ProductAdd),
+    '/book/edit/:id': (data) => render(ProductAdd, data.data.id),
+    '/admin/book': () => render(ListProductAdmin),
+    '/admin/book/:categoryId': (data) => render(ListProductAdmin, data.data.categoryId),
+    '/admin/category': () => render(ListCategoryAdmin),
+    '/category/add': () => render(CategoryAdd),
+    '/category/edit/:id': (data) => render(CategoryAdd, data.data.id),
+    '/cart/detail': ()=> render(Cart)
 })
 
 

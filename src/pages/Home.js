@@ -1,8 +1,0 @@
-export const Home = {
-    render: () =>
-    `<div class="px-[20vw]">
-        <h1 class="mb-4 text-4xl font-bold text-gray-900 lg:font-extrabold lg:text-6xl lg:leading-tight dark:text-white lg:text-center 2xl:px-30 lg:mb-8">Build websites even faster with components on top of Tailwind CSS</h1>
-        <p class="mb-10 text-lg font-normal text-gray-500 dark:text-gray-400 lg:text-center lg:text-2xl xl:px-32">Start developing with an open-source library of over 400+ web components and interactive elements built with the utility classes from Tailwind CSS</p>
-        <div class="flex flex-col mb-8 md:flex-row lg:justify-center"><a href="https://flowbite.com/docs/getting-started/quickstart/" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-base px-6 py-2.5 text-center md:mr-5 mb-3 md:mb-0 inline-flex items-center justify-center">Get started</a><a href="#components" class="text-gray-600 bg-white-100 hover:bg-gray-100 hover:text-blue-600 border border-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white border dark:border-gray-600 font-semibold rounded-xl text-base px-6 py-2.5 text-center inline-flex justify-center items-center"><svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> Explore components</a></div>
-    </div>`
-}
